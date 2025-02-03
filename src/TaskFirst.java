@@ -6,9 +6,16 @@ public class TaskFirst {
     public static void main(String[] args) {
 
         String nameMonth = "";
+        int monthNumber = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер месяца: ");
-        int monthNumber = scanner.nextInt();
+
+        if (!scanner.hasNextInt()) {
+            System.out.println("Ошибка: введите целое число!");
+        } else {
+            monthNumber = scanner.nextInt();
+        }
+        scanner.close();
 
         switch (monthNumber) {
             case 1:
